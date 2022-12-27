@@ -1,0 +1,34 @@
+//Linear Search
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+int n;
+cout<<"Enter size of array"<<endl;
+cin>>n;
+int arr[n],key,i,flag=0;
+cout<<"Enter key of array"<<endl;
+cin>>key;
+cout<<"Enter Elements of array"<<endl;
+
+for(int i=0;i<n;i++){
+cin>>arr[i];
+}
+for(i=0;i<n;i++){
+
+if(arr[i]==key){
+cout<<"Element found at index "<<i<<endl;
+flag=1;
+break;
+}
+}
+if(flag=0){
+cout<<"Element not found" <<endl;
+
+}
+}
+
+

@@ -1,0 +1,70 @@
+//job queue
+
+#include<iostream>
+using namespace std;
+class Queue{
+public:
+int front, rear, arr[100], size;
+void setData(){
+cout<<"Enter maximum size of Job : ";
+cin>>size;
+int arr[size];
+}
+int isFull(){
+if(rear == size - 1){
+return 1;
+}else{
+return 0;
+}
+}
+int isEmpty(){
+if(front == -1 || front > rear){
+return 1;
+
+}else{
+return 0;
+}
+}
+void Enqueue(){
+if(isFull() == 0){
+cout<<"Enter a Job : ";
+int n;
+cin>>n;
+rear++;
+arr[rear] = n;
+if(front == -1){
+front = 0;
+}
+}else{
+cout<<"Job queue is full."<<endl;
+}
+}
+void Dequeue(){
+if(isEmpty() == 0){
+cout<<arr[front]<<" is deleted."<<endl;
+front++;
+
+}else{
+cout<<"Job queue is already empty"<<endl;
+}
+}
+void Print(){
+cout<<"Job Queue : "<<endl;
+for(int i = front; i <= rear; i++){
+cout<<arr[i]<<" ";
+}
+}
+};
+int main(){
+Queue q;
+q.front = -1;
+q.rear = -1;
+q.setData();
+q.Enqueue();
+q.Enqueue();
+q.Dequeue();
+q.Print();
+return 0;
+}
+
+

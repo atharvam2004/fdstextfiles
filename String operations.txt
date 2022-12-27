@@ -1,0 +1,47 @@
+//String operations
+str="atharva is a smart guyyug trams a si avrahta"
+j=0
+k=0
+#for i in range (len(str)):
+#if(str[i]==' ' and j<k):
+# j=k
+# k=0
+#elif(str[i]==' '):
+#
+
+k=0
+
+# else:
+#
+
+k+=1
+
+#print(j)
+
+l=max(str.split(),key=len)
+print(len(l))
+
+ch=''
+ch=input()
+count=0
+for i in range (len(str)):
+if(str[i]==ch):
+
+count+=1
+print(count)
+
+rev=str[::-1]
+print(rev)
+if(rev==str):
+print("String is Palindrome")
+else:
+print("String is not Palindrome")
+
+index=str.index("smart")
+print(index)
+
+word=input()
+wor=str.split(word)
+print(len(word))
+
+

@@ -1,0 +1,98 @@
+//Matrix Operations
+#include <iostream>
+using namespace std;
+int main() {
+int a[3][3];
+int b[3][3];
+int add[3][3];
+int sub[3][3];
+int multi[3][3];
+int i,j,k;
+
+cout<<"Enter first matrix";
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+cin>>a[i][j];
+}
+}
+cout<<"Enter second matrix";
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+cin>>b[i][j];
+
+}
+}
+
+//Additiond
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+add[i][j]=a[i][j]+b[i][j];
+}
+}
+
+//subsr=tron
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+sub[i][j]=a[i][j]-b[i][j];
+}
+}
+//garbage
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+multi[i][j]=0;
+}
+}
+//mult
+
+for(i = 0; i < 3; ++i){
+for(j = 0; j < 3; ++j){
+for(k = 0; k < 3; ++k)
+{
+multi[i][j] += a[i][k] * b[k][j];
+}
+
+}
+
+}
+
+cout<<"Addition is";
+for(i=0;i<3;i++){
+cout<<"\n ";
+
+for(j=0;j<3;j++){
+cout<<add[i][j]<<" ";
+}
+}
+cout<<"\n ";
+
+cout<<"Sub is";
+for(i=0;i<3;i++){
+cout<<"\n ";
+
+for(j=0;j<3;j++){
+cout<<sub[i][j]<<" ";
+}
+}
+cout<<"\n ";
+
+cout<<"mult is";
+for(i=0;i<3;i++){
+cout<<"\n ";
+
+for(j=0;j<3;j++){
+cout<<multi[i][j]<<" ";
+}
+}
+
+cout<<"transpose";
+for(i=0;i<3;i++){
+for(j=0;j<3;j++){
+cout<<a[j][i]<<" ";
+
+}
+cout<<endl;
+}
+
+}
+
+
